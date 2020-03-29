@@ -930,6 +930,17 @@ function QueueStatus(queue, member) {
 }
 
 /**
+ * ExtensionStateList Action.
+ * @constructor
+ * @see Action(String)
+ * @see See <a href="https://wiki.asterisk.org/wiki/display/AST/Asterisk+13+ManagerAction_ExtensionStateList">https://wiki.asterisk.org/wiki/display/AST/Asterisk+13+ManagerAction_ExtensionStateList</a>.
+ * @augments Action
+ */
+function ExtensionStateList() {
+	ExtensionStateList.super_.call(this, 'ExtensionStateList');
+}
+
+/**
  * QueueReset Action.
  * @constructor
  * @see Action(String)
@@ -1290,6 +1301,7 @@ util.inherits(Action, message.Message);
         QueueReset,
         QueueSummary,
         QueueStatus,
+        ExtensionStateList,
         QueueRemove,
         QueueRule,
         QueueAdd,
