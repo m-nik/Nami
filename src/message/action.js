@@ -930,6 +930,21 @@ function QueueStatus(queue, member) {
 }
 
 /**
+ * SIPpeerstatus Action.
+ * @constructor
+ * @see Action(String)
+ * @see See <a href="https://wiki.asterisk.org/wiki/display/AST/Asterisk+13+ManagerAction_SIPpeerstatus">https://wiki.asterisk.org/wiki/display/AST/Asterisk+13+ManagerAction_SIPpeerstatus</a>.
+ * @property {String} Peer Optional, Peer
+ * @augments Action
+ */
+function SIPpeerstatus(peer) {
+	SIPpeerstatus.super_.call(this, 'SIPpeerstatus');
+	if (undefined !== peer) {
+		this.set('Peer', peer);
+	}
+}
+
+/**
  * ExtensionStateList Action.
  * @constructor
  * @see Action(String)
