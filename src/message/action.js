@@ -412,6 +412,17 @@ function DbPut() {
 }
 
 /**
+ * DeviceStateList Action.
+ * @constructor
+ * @see Action(String)
+ * @see See <a href="https://docs.asterisk.org/Asterisk_16_Documentation/API_Documentation/AMI_Actions/DeviceStateList/">DeviceStateList</a>.
+ * @augments Action
+ */
+function DeviceStateList() {
+  DeviceStateList.super_.call(this, 'DeviceStateList');
+}
+
+/**
  * ExtensionState Action.
  * @constructor
  * @see Action(String)
@@ -422,17 +433,6 @@ function DbPut() {
  */
 function ExtensionState() {
 	ExtensionState.super_.call(this, 'ExtensionState');
-}
-
-/**
- * DeviceStateList Action.
- * @constructor
- * @see Action(String)
- * @see See <a href="https://docs.asterisk.org/Asterisk_16_Documentation/API_Documentation/AMI_Actions/DeviceStateList/">DeviceStateList</a>.
- * @augments Action
- */
-function DeviceStateList() {
-  DeviceStateList.super_.call(this, 'DeviceStateList');
 }
 
 /**
@@ -1292,6 +1292,8 @@ util.inherits(Action, message.Message);
         DbDeltree,
         DbGet,
         DbPut,
+        DeviceStateList,
+        ExtensionStateList,
         ExtensionState,
         GetConfig,
         GetConfigJson,
@@ -1328,8 +1330,6 @@ util.inherits(Action, message.Message);
         QueueReset,
         QueueSummary,
         QueueStatus,
-        ExtensionStateList,
-        DeviceStateList,
         QueueRemove,
         QueueRule,
         QueueAdd,
