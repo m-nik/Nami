@@ -425,6 +425,17 @@ function ExtensionState() {
 }
 
 /**
+ * DeviceStateList Action.
+ * @constructor
+ * @see Action(String)
+ * @see See <a href="https://docs.asterisk.org/Asterisk_16_Documentation/API_Documentation/AMI_Actions/DeviceStateList/">DeviceStateList</a>.
+ * @augments Action
+ */
+function DeviceStateList() {
+  DeviceStateList.super_.call(this, 'DeviceStateList');
+}
+
+/**
  * GetConfig Action.
  * @constructor
  * @see Action(String)
@@ -1318,6 +1329,7 @@ util.inherits(Action, message.Message);
         QueueSummary,
         QueueStatus,
         ExtensionStateList,
+        DeviceStateList,
         QueueRemove,
         QueueRule,
         QueueAdd,
