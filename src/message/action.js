@@ -1265,6 +1265,7 @@ util.inherits(Action, message.Message);
         SipShowRegistry,
         SipQualifyPeer,
         SipPeers,
+        SIPpeerstatus,
         AgentLogoff,
         Agents,
         AttendedTransfer,
